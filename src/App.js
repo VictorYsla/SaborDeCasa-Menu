@@ -1,31 +1,49 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
   let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const screenWidth = window.screen.width;
+
+  useEffect(() => {
+    console.log("screenWidth");
+  }, [screenWidth]);
 
   return (
     <div
       className="App"
       style={{
-        backgroundColor: "#ff914f",
+        backgroundColor: "#000000",
         height: "100vh",
       }}
     >
       <img
-        src={require("../src/menu/7b17a35b-cc94-4567-9d6f-fd685ea56173.jpeg")}
+        src={require("../src/menu/7bd2c61d-0c7e-4317-913f-b8e543a54ee3.jpeg")}
         alt="car"
         style={{
           height: "80%",
           width: isMobile ? "100%" : undefined,
         }}
       />
-      <a
-        href="https://maps.app.goo.gl/B3zmn9fbsAtaBsiF7"
-        target="_blank"
-        rel="noreferrer"
+      <div
+        style={{ justifyContent: "flex-start" }}
+        className="top-element-formatting"
       >
-        Nuestra ubicación
-      </a>
+        <a
+          href="https://maps.app.goo.gl/B3zmn9fbsAtaBsiF7"
+          target="_blank"
+          rel="noreferrer"
+          style={{ color: "white" }}
+        >
+          Nuestra ubicación
+        </a>
+        <div
+          className="top-element-formatting"
+          style={{ color: "white", fontSize: 14 }}
+        >
+          (Presiona aquí)
+        </div>
+      </div>
     </div>
   );
 }
