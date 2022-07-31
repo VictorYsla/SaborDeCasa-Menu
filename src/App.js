@@ -18,7 +18,7 @@ function App() {
       }}
     >
       <img
-        src={require("../src/menu/7bd2c61d-0c7e-4317-913f-b8e543a54ee3.jpeg")}
+        src={require("../src/menu/domingo31.jpeg")}
         alt="car"
         style={{
           height: "80%",
